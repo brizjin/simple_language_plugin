@@ -25,6 +25,7 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
+    <fileTypeFactory implementation="com.lang.SimpleFileTypeFactory"/>
     <!-- Add your extensions here -->
   </extensions>
 
