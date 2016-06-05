@@ -66,6 +66,7 @@ public class MyLexer {
 		else if ( c=='\n' ) {
 			consume();
 			token = SimpleTokenType.CRLF;
+			stop = p-1;
 		}
 		else if ( c=='\r' ) {
 			consume();

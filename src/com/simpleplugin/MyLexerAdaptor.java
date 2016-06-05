@@ -17,7 +17,7 @@ public class MyLexerAdaptor extends LexerBase {
 	@Override
 	public void advance() {
 		IElementType token = lexer.nextToken();
-//		System.out.println("advance()");
+		//System.out.println("advance()");
 	}
 
 	/** API doc says that the end offset is the offset but in fact it seems
@@ -25,16 +25,19 @@ public class MyLexerAdaptor extends LexerBase {
 	 */
 	@Override
 	public void start(CharSequence buffer, int startOffset, int endOffset, int initialState) {
-//		System.out.println("start: "+buffer+", "+startOffset+", "+endOffset+", "+initialState);
+		System.out.println("\n\n");
+		System.out.println("start: "+buffer+", "+startOffset+", "+endOffset+", "+initialState);
 		this.buffer = buffer;
 		this.startOffset = startOffset;
 		this.endOffset = endOffset;
 		this.initialState = initialState;
 		lexer = new MyLexer(buffer.subSequence(startOffset, endOffset).toString());
+		//System.out.println("start()");
 	}
 
 	@Override
 	public int getState() {
+		//System.out.println("getState()");
 		return initialState;
 	}
 
@@ -42,7 +45,7 @@ public class MyLexerAdaptor extends LexerBase {
 	@Override
 	public IElementType getTokenType() {
 		IElementType type = lexer.getTokenType();
-//		System.out.println("getTokenType: "+type);
+		//System.out.println("getTokenType: "+type);
 		return type;
 	}
 
@@ -51,22 +54,26 @@ public class MyLexerAdaptor extends LexerBase {
 	 */
 	@Override
 	public int getTokenStart() {
+		//System.out.println("getTokenStart()");
 		return startOffset + lexer.start;
 	}
 
 	@Override
 	public int getTokenEnd() {
 		// seems like stop must be one PAST the last char for this token
+		//System.out.println("getTokenEnd()");
 		return startOffset + lexer.stop + 1;
 	}
 
 	@Override
 	public CharSequence getBufferSequence() {
+		//System.out.println("getBufferSequence()");
 		return buffer;
 	}
 
 	@Override
 	public int getBufferEnd() {
+		//System.out.println("getBufferEnd()");
 		return endOffset;
 	}
 }

@@ -39,6 +39,7 @@ public class SimpleSyntaxHighlighter extends SyntaxHighlighterBase {
 	@NotNull
 	@Override
 	public TextAttributesKey[] getTokenHighlights(IElementType tokenType) {
+		System.out.println("Highlight tokenType: "+tokenType);
 		if (tokenType.equals(SimpleTokenType.SEPARATOR)) {
 			return SEPARATOR_KEYS;
 		} else if (tokenType.equals(SimpleTokenType.KEY)) {
@@ -50,6 +51,7 @@ public class SimpleSyntaxHighlighter extends SyntaxHighlighterBase {
 		} else if (tokenType.equals(TokenType.BAD_CHARACTER)) {
 			return BAD_CHAR_KEYS;
 		} else {
+			System.out.println("Highlight tokenType: EMPTY_KEYS");
 			return EMPTY_KEYS;
 		}
 	}
