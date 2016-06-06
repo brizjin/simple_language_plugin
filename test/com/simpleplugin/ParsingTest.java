@@ -12,22 +12,27 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.CharsetToolkit;
 import com.intellij.psi.*;
 import com.intellij.psi.impl.PsiFileFactoryImpl;
+import com.intellij.psi.tree.IElementType;
 import com.intellij.testFramework.LightVirtualFile;
+import com.intellij.testFramework.PlatformLiteFixture;
 import com.intellij.testFramework.UsefulTestCase;
 import com.intellij.testFramework.fixtures.LightPlatformCodeInsightFixtureTestCase;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class ParsingTest extends LightPlatformCodeInsightFixtureTestCase {
+//public class ParsingTest extends LightPlatformCodeInsightFixtureTestCase {
+public class ParsingTest extends PlatformLiteFixture {
     public ParsingTest(){
     }
 
     public void testSimple() throws Exception {
-        MyParser parser = new MyParser();
+        //MyParser parser = new MyParser();
+        //parser.parse()
         //parser.parse()
 
         //PsiFile file = PsiFileFactoryImpl..createFileFromText("Test",SimpleLanguage.INSTANCE,"Hello : wrd");
         //Project project = file.getProject();
+
         //MockProjectEx myProject = new MockProjectEx(this.getTestRootDisposable());
         //MockPsiManager myPsiManager = new MockPsiManager(myProject);
         //PsiFileFactoryImpl myFileFactory = new PsiFileFactoryImpl(myPsiManager);
@@ -47,12 +52,13 @@ public class ParsingTest extends LightPlatformCodeInsightFixtureTestCase {
         //PsiFile file = myFileFactory.createFileFromText("Test",SimpleLanguage.INSTANCE,"Hello : wrd");
         //this.setUp();
 
-        PsiFile file = this.createLightFile("Test",SimpleLanguage.INSTANCE,"Hello : wrd");
+        //PsiFile file = this.createLightFile("Test",SimpleLanguage.INSTANCE,"Hello : wrd");
         //PsiFile file2 = this.createLightFile("simple","hello : word");
+        //PsiFile file = null;
 
-
-
+        //IElementType
         //parser.parse(file,builder);
+
     }
 
 

@@ -25,8 +25,8 @@ public class MyLexerAdaptor extends LexerBase {
 	 */
 	@Override
 	public void start(CharSequence buffer, int startOffset, int endOffset, int initialState) {
-		System.out.println("\n\n");
-		System.out.println("start: "+buffer+", "+startOffset+", "+endOffset+", "+initialState);
+
+		System.out.println("\nstart: "+buffer+", "+startOffset+", "+endOffset+", "+initialState);
 		this.buffer = buffer;
 		this.startOffset = startOffset;
 		this.endOffset = endOffset;

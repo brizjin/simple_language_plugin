@@ -50,6 +50,7 @@ public class SimpleParserDefinition implements ParserDefinition{
     }
 
     public PsiFile createFile(FileViewProvider viewProvider) {
+        
         return new SimpleFile(viewProvider);
     }
 
