@@ -1,4 +1,4 @@
-package com.lang;
+package com.simpleplugin;
 
 import com.intellij.openapi.fileTypes.*;
 import org.jetbrains.annotations.NotNull;
