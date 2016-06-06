@@ -2,7 +2,6 @@ package com.simpleplugin;
 
 
 import com.intellij.testFramework.ParsingTestCase;
-import com.intellij.testFramework.PlatformTestUtil;
 
 import java.io.IOException;
 
@@ -14,27 +13,18 @@ public class SimpleParsingTest extends ParsingTestCase {
     public void testParsingTestData() throws Exception {
         doTest(true);
     }
-    public void testFromText() throws IOException {
-        this.doCodeTest("hello : word");
+    public void testTest1() throws IOException {
+        //this.doCodeTest("hello : word");
+        doTest(true);
+    }
+    public void testComment() throws IOException{
+        this.doCodeTest("comment : hello\ntest : more");
+
+        //doTest(true);
     }
 
     @Override
     protected String getTestDataPath() {
         return "testData";
     }
-
-    /*@Override
-    protected String getTestDataPath() {
-        return PlatformTestUtil.getCommunityPath() + "/testData";
-    }*/
-
-    //@Override
-    //protected boolean skipSpaces() {
-    //    return false;
-    //}
-
-    //@Override
-    //protected boolean includeRanges() {
-    //    return true;
-    //}
 }

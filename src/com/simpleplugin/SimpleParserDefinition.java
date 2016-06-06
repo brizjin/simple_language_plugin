@@ -16,7 +16,8 @@ import com.simpleplugin.psi.SimpleTokenType;
 import org.jetbrains.annotations.NotNull;
 
 public class SimpleParserDefinition implements ParserDefinition{
-	public static final IFileElementType FILE = new IFileElementType(Language.<SimpleLanguage>findInstance(SimpleLanguage.class));
+	//public static final IFileElementType FILE = new IFileElementType(Language.findInstance(SimpleLanguage.class));
+    public static final IFileElementType FILE = new IFileElementType(SimpleLanguage.INSTANCE);
 
     @NotNull
     @Override

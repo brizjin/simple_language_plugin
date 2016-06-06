@@ -1,0 +1,7 @@
+Simple File
+  SimplePropertyImpl(PROPERTY)
+    PsiElement(SimpleTokenType.KEY)('Hello')
+    PsiWhiteSpace(' ')
+    PsiElement(SimpleTokenType.SEPARATOR)(':')
+    PsiWhiteSpace(' ')
+    PsiElement(SimpleTokenType.VALUE)('word')
